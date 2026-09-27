@@ -2,7 +2,7 @@
 
 A jurisdiction-aware AI legal assistant — frontend prototype, built for LexHack 2026.
 
-This is the **complete frontend**, wired to realistic demo data so every screen is fully
+This is the **completed frontend**, wired to realistic demo data so every screen is fully
 interactive without a backend. It's built to feel like an AI lawyer while behaving like a
 legal reasoning + research + evidence system: every substantive claim is a clickable citation
 back to a (mock) primary source.
@@ -76,6 +76,6 @@ research index) could be dropped in behind the same interfaces.
 
 ## Not included (by design, for this phase)
 
-This is frontend-only, as requested. Wiring `AskCounsel.tsx`'s `send()` function to a real
+This is frontend-only. Wiring `AskCounsel.tsx`'s `send()` function to a real
 model + retrieval pipeline, real document OCR/parsing, and persistence are the natural next
 phase.
