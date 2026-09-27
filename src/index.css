@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Source Serif 4", Georgia, serif;
+  --font-sans: "Public Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --color-ink-950: #0c111c;
+  --color-ink-900: #10182a;
+  --color-ink-800: #1a2438;
+  --color-ink-700: #263252;
+  --color-ink-600: #37456b;
+  --color-ink-400: #8b93a8;
+  --color-ink-200: #c4c9d6;
+
+  --color-paper-100: #eef0e9;
+  --color-paper-200: #e4e6dc;
+  --color-paper-300: #d6d9c9;
+
+  --color-brass-300: #d7c07f;
+  --color-brass-500: #b08d3e;
+  --color-brass-600: #8f7130;
+
+  --color-oxblood-500: #8a3636;
+  --color-oxblood-600: #712b2b;
+  --color-oxblood-100: #f3e2e0;
+
+  --color-sage-500: #5c7a66;
+  --color-sage-600: #4a6353;
+  --color-sage-100: #e2ebe3;
+
+  --color-bone: #f6f4ee;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-ink-950);
+  color: var(--color-bone);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-brass-500);
+  color: var(--color-ink-950);
+}
+
+/* Scrollbars: quiet, not the browser default */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-ink-600) transparent;
+}
+*::-webkit-scrollbar { width: 8px; height: 8px; }
+*::-webkit-scrollbar-thumb { background: var(--color-ink-600); border-radius: 4px; }
+*::-webkit-scrollbar-track { background: transparent; }
+
+/* Focus visibility, kept even where we hand-roll interactive elements */
+:focus-visible {
+  outline: 2px solid var(--color-brass-500);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+}
+
+.paper-surface {
+  background-color: var(--color-paper-100);
+  color: var(--color-ink-950);
+  background-image:
+    linear-gradient(var(--color-paper-200) 1px, transparent 1px);
+  background-size: 100% 2rem;
+  background-position: 0 0.2rem;
+}
+
+.citation-mark {
+  font-family: var(--font-mono);
+}
